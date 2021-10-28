@@ -1,0 +1,12 @@
+         Info adInfo = null;
+          try {
+            adInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
+
+          } catch (IOException e) {
+            // Unrecoverable error connecting to Google Play services (e.g.,
+            // the old version of the service doesn't support getting AdvertisingId).
+
+          } catch (GooglePlayServicesNotAvailableException e) {
+            // Google Play services is not available entirely.
+          } catch (IllegalStateException e) {
+            // TODO Auto-generated catch block
